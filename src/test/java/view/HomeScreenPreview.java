@@ -14,7 +14,7 @@ public class HomeScreenPreview {
 
         frame.add(new HomeScreen());
 
-        frame.setSize(1080, 720);
+        frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
