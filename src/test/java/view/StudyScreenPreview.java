@@ -1,7 +1,6 @@
-package test.java.view;
+package view;
 
 import javax.swing.*;
-import main.java.view.StudyScreen;
 
 /**
  * 学習中の画面のプレビューを行うクラス
