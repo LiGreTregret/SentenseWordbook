@@ -3,6 +3,10 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * 各画面を登録して画面遷移を行う親フレームをつくるクラス
+ * 使用されるパネルを適宜インスタンスメソッドで登録して使う
+ */
 public class ParentFrame extends JFrame {
     private CardLayout cardLayout;
     private JPanel mainPanel;
