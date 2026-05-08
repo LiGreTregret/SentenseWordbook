@@ -22,12 +22,12 @@ public class ParentFrame extends JFrame {
         mainPanel = new JPanel(cardLayout);
 
         /* 各画面のインスタンス化 */
-        // HomeScreen homeScreen = new HomeScreen(this);
-        // StudyScreen studyScreen = new StudyScreen(this);
+        HomeScreen homeScreen = new HomeScreen(this);
+        StudyScreen studyScreen = new StudyScreen(this);
 
         /* パネルに画面を登録 */
-        // mainPanel.add(homeScreen, "Home");
-        // mainPanel.add(studyScreen, "Study");
+        mainPanel.add(homeScreen, "Home");
+        mainPanel.add(studyScreen, "Study");
         
         add(mainPanel);
         setVisible(true);

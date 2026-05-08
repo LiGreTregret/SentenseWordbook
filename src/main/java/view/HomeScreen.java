@@ -8,7 +8,7 @@ import javax.swing.*;
  * メインフレームに埋め込んで使う
  */
 public class HomeScreen extends JPanel {
-    public HomeScreen() {
+    public HomeScreen(JFrame frame) {
         /* パネル全体の設定 */
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(1080, 720));

@@ -11,7 +11,7 @@ public class StudyScreen extends JPanel {
     private JLabel englishLabel;
     private JLabel japaneseLabel;
 
-    public StudyScreen() {
+    public StudyScreen(JFrame frame) {
         /* パネル全体の設定 */
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(1080, 720));
