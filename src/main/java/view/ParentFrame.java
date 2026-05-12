@@ -30,7 +30,6 @@ public class ParentFrame extends JFrame {
         mainPanel.add(studyScreen, "Study");
         
         add(mainPanel);
-        setVisible(true);
     }
 
     public void showScreen(String screenName) {
