@@ -8,7 +8,22 @@ import javax.swing.*;
  * メインフレームに埋め込んで使う
  */
 public class HomeScreen extends JPanel {
-    public HomeScreen(JFrame frame) {
+    private ParentFrame parent;
+
+    /** ParentFrame埋め込み用 */
+    public HomeScreen(ParentFrame parent) {
+        this.parent = parent;
+        init();
+    }
+
+    /** プレビュー用 */
+    public HomeScreen() {
+        this.parent = null;
+        init();
+    }
+
+    /** 画面構成 */
+    private void init() {
         /* パネル全体の設定 */
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(1080, 720));
@@ -32,6 +47,16 @@ public class HomeScreen extends JPanel {
         startButton.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 35));
         startButton.setPreferredSize(new Dimension(360, 120));
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        //  画面遷移の操作設定
+        startButton.addActionListener(e -> {
+            if (parent != null) {
+                parent.showScreen("Study");
+            } else {
+                System.out.println("プレビュー中");
+            }
+            
+        });
 
         /* ボタンをパネルに追加 */
         buttonPanel.add(startButton, btnPnlBagConstraints);

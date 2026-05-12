@@ -8,10 +8,24 @@ import javax.swing.*;
  * メインフレームに埋め込んで使う
  */
 public class StudyScreen extends JPanel {
+    private ParentFrame parent;
     private JLabel englishLabel;
     private JLabel japaneseLabel;
 
-    public StudyScreen(JFrame frame) {
+    /** ParentFrame埋め込み用 */
+    public StudyScreen(ParentFrame parent) {
+        this.parent = parent;
+        init();
+    }
+
+    /** プレビュー用 */
+    public StudyScreen() {
+        this.parent = null;
+        init();
+    }
+
+    /** 画面構成 */
+    private void init() {
         /* パネル全体の設定 */
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setPreferredSize(new Dimension(1080, 720));
@@ -30,6 +44,15 @@ public class StudyScreen extends JPanel {
         JButton homeButton = new JButton("ホームに戻る");
         homeButton.setAlignmentX(Component.RIGHT_ALIGNMENT);
         homeButton.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 16));
+
+        // 画面遷移の操作実装
+        homeButton.addActionListener(e -> {
+            if (parent != null) {
+                parent.showScreen("Home");
+            } else {
+                System.out.println("プレビュー中");
+            }
+        });
 
         // パネルにボタンを追加
         homeBtnPanel.add(homeButton);

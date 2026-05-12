@@ -11,7 +11,7 @@ public class StudyScreenPreview {
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        StudyScreen studyScreen = new StudyScreen(frame);
+        StudyScreen studyScreen = new StudyScreen();
         studyScreen.setEnLabelText("<html><span style='color: red;'>Pre</span>view</html>");
         studyScreen.setJpLabelText("<html>プレビュー</html>");
         frame.add(studyScreen);

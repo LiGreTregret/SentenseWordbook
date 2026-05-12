@@ -11,7 +11,7 @@ public class HomeScreenPreview {
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        frame.add(new HomeScreen(frame));
+        frame.add(new HomeScreen());
 
         frame.pack();
         frame.setLocationRelativeTo(null);
